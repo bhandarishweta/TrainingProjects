@@ -1,0 +1,5 @@
+com/core/banking/service/BankServiceTest.class
+com/core/banking/model/AccountTest.class
+com/core/banking/model/TransactionTest.class
+com/core/banking/service/AccountServiceTest.class
+com/core/banking/AppTest.class

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="account" class="com.core.banking.model.Account">
+        <property name="accountNumber" value="1234567890" />
+        <property name="balance" value="0" />
+    <!-- Define a bean named "account" of class "com.core.banking.model.Account" -->
+        <!-- Set the property "accountNumber" with the value "1234567890" -->
+        <!-- Set the property "balance" with the value "0" -->
+    </bean>
+
+    <bean id="accountService" class="com.core.banking.service.AccountService">
+        <property name="account" ref="account" />
+        <!-- Define a bean named "accountService" of class "com.core.banking.service.AccountService" -->
+            <!-- Set the property "account" by referencing the "account" bean -->
+    </bean>
+
+    <bean id="bankService" class="com.core.banking.service.BankService">
+        <property name="account" ref="account" />
+       <!-- Define a bean named "bankService" of class "com.core.banking.service.BankService" -->
+             <!-- Set the property "account" by referencing the "account" bean -->
+    </bean>
+
+    <bean id="app" class="com.core.banking.App">
+        <property name="bankService" ref="bankService" />
+        <!-- Define a bean named "app" of class "com.core.banking.App" -->
+             <!-- Set the property "bankService" by referencing the "bankService" bean -->
+    </bean>
+    
+
+</beans>
