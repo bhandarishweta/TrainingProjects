@@ -1,0 +1,5 @@
+package com.example.consumer.domain.dto;
+
+public class NotificationDto {
+
+}

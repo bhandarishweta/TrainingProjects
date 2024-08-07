@@ -1,0 +1,12 @@
+package com.example.consumer.repository;
+
+import org.springframework.stereotype.Repository;
+
+import com.example.consumer.domain.Notification;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+@Repository
+public interface ConsumerRepository extends JpaRepository<Notification, Long> {
+
+}

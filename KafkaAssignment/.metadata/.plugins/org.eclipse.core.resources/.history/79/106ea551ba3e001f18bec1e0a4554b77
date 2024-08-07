@@ -1,0 +1,14 @@
+package com.example.consumer.domain;
+@Entity
+public class Notification {
+
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String message;
+    private String recepient;
+	@Override
+	public String toString() {
+		return "FoodOrder [id=" + id + ", item=" + item + ", amount=" + amount + "]";
+	}
+
+}
