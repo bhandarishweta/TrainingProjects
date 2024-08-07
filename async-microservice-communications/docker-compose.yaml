@@ -1,0 +1,18 @@
+# Docker compose file for starting RabbitMQ and RabbitMQ Management Plugin
+# To start RabbitMQ and RabbitMQ Management Plugin, run the following command:
+# In Linux
+# sudo docker compose up -d
+# In Windows
+# docker compose up -d
+
+# To access RabbitMQ Management Plugin, open a browser and go to http://localhost:15672
+version: '4'
+services:
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5673"
+      - "15672:15673"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
